@@ -2,13 +2,13 @@
   <h1>YouTube Video Search</h1>
 </div>
 
-<form class="yt-link-form">
+<div class="yt-link-form">
   <mat-form-field class="yt-link">
     <mat-label>Channel Name</mat-label>
     <input #channelName matInput placeholder="" value="">
   </mat-form-field>
   <button (click)="getData()" mat-raised-button color="primary">Search</button>
-</form>
+</div>
 
 <ul *ngFor="let channel of channels">
   <a target="_blank" href="https://www.youtube.com/channel/{{channel.id.channelId}}">

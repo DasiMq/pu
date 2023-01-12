@@ -11,9 +11,9 @@ export class AppComponent {
 
   @ViewChild('channelName') channelName!: ElementRef;
 
-  channels:any
+  channels: any
 
-  constructor(private youtube:YoutubeService) {}
+  constructor(private youtube: YoutubeService) { }
 
   ngOnInit() {
     this.youtube.getChannels("Laptop").subscribe((data) => {
@@ -23,6 +23,15 @@ export class AppComponent {
   }
 
   getData() {
+    // const urlMetadata = require('url-metadata')
+    // urlMetadata('http://bit.ly/2ePIrDy').then(
+    //   function (metadata) { // success handler
+    //     console.log(metadata)
+    //   },
+    //   function (error) { // failure handler
+    //     console.log(error)
+    //   })
+    
     var channelName = this.channelName.nativeElement.value
 
     this.youtube.getChannels(channelName).subscribe((data) => {
