@@ -1,0 +1,36 @@
+.head-bar {
+    /* height: 200px; */
+    background-color: #3F51B5;
+    color: #fff;
+    margin: 0 auto;
+}
+
+.head-bar h1 {
+    text-align: center;
+    font-size: xx-large;
+    padding: 50px 0;
+}
+
+.yt-link-form {
+    display: flex;
+    margin: 40px auto;
+    min-width: 150px;
+    width: 60%;
+}
+
+.yt-link {
+    width: 100%;
+}
+
+button {
+    margin-left: 20px;
+}
+
+::ng-deep .mat-mdc-raised-button.mat-mdc-button-base {
+    height: 56px;
+    width: 120px;
+}
+
+::ng-deep .mdc-button .mdc-button__label {
+    font-size: 16px;
+}
