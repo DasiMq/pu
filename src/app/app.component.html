@@ -4,8 +4,16 @@
 
 <form class="yt-link-form">
   <mat-form-field class="yt-link">
-      <mat-label>Channel Name</mat-label>
-      <input matInput placeholder="" value="">
+    <mat-label>Channel Name</mat-label>
+    <input #channelName matInput placeholder="" value="">
   </mat-form-field>
-  <button mat-raised-button color="primary">Search</button>
+  <button (click)="getData()" mat-raised-button color="primary">Search</button>
 </form>
+
+<ul *ngFor="let channel of channels">
+  <a target="_blank" href="https://www.youtube.com/channel/{{channel.id.channelId}}">
+    <img width="50" src="{{channel.snippet.thumbnails.medium.url}}">
+  </a>
+  {{channel.snippet.channelTitle}}<br>
+  <!-- {{channel.snippet.description}} -->
+</ul>
