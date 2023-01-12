@@ -13,7 +13,7 @@ export class YoutubeService {
 
     const API_KEY = "AIzaSyAw2UEkH1sJ-ri3wWtvTBH9JrCsV4EWxmk"
 
-    const url = "https://www.googleapis.com/youtube/v3/search?part=snippet&q="+channelName+"&type=channel&key="+API_KEY+"&maxResults=10"
+    const url = "https://www.googleapis.com/youtube/v3/search?part=snippet&q="+channelName+"&type=channel&key="+API_KEY+"&maxResults=1"
 
     return this.http.get<any>(url)
   }
